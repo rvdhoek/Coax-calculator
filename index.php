@@ -10,7 +10,7 @@ $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $type = "C1,5";
 $result = $add1*1.5*(($add2/230)/100);
-$extrainfo="1extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 1,5: Voortplantingssnelheid:0,91 Loopsnelheid:136,5";
 }
 if($operator=="C3")
 {
@@ -18,7 +18,7 @@ $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $type = "C3";
 $result = $add1*3*(($add2/230)/100);
-$extrainfo="2extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 3: Voortplantingssnelheid:0,89 Loopsnelheid:133";
 }
 if($operator=="C6")
 {
@@ -26,7 +26,7 @@ $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $type = "C6";
 $result  =$add1*6*(($add2/230)/100);
-$extrainfo="3extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 6: Voortplantingssnelheid:0,88 Loopsnelheid:132";
 }
 if($operator=="C9")
 {
@@ -34,14 +34,14 @@ $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $type = "C9";
 $result = $add1*9*(($add2/230)/100);
-$extrainfo="4extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 9: Voortplantingssnelheid:0,81 Loopsnelheid:127";
 }
 if($operator=="C12")
 {
 $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $result = $add1*12*(($add2/230)/100);
-$extrainfo="extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 12: Voortplantingssnelheid:0,67 Loopsnelheid:100";
 }
 if($operator=="C18")
 {
@@ -49,7 +49,7 @@ $add1 = $_REQUEST['fvalue'];
 $add2 = $_REQUEST['lvalue'];
 $type = "C18";
 $result = $add1*18*(($add2/230)/100);
-$extrainfo="6extrainnfo, verkoringsfactor en kabeltypekkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk";
+$extrainfo="Extrainfo Coax 18: Voortplantingssnelheid:    Loopsnelheid:";
 }
 if($_REQUEST['fvalue']==NULL && $_REQUEST['lvalue']==NULL)
 {
@@ -87,8 +87,7 @@ echo "<script language=javascript> alert(\"Please Enter frequency\");</script>";
                 <td style="background-color:"#ffffff"; color:red; font-family:'Times New Roman'">Frequentie</td>
                 <td class="auto-style5">
                     <!-- <input name="lvalue" type="number" value="0" min="0" max="1000" style="color:red"> -->
-
-                        <input name="lvalue" type="range" min="0" max="1000" value="0" step="10" onchange="showValue(this.value)" />
+                        <input name="lvalue" type="range" min="0" max="1000" value="0" onchange="showValue(this.value)" />
                         <span id="range">0</span><span id="range">Mhz</span>
                         <script type="text/javascript">
                         function showValue(newValue)
@@ -109,9 +108,11 @@ echo "<script language=javascript> alert(\"Please Enter frequency\");</script>";
 
             </tr>
             </table>
-               <table style="border:groove #00FF99"
                 <tr>
                         <td style="color:darkblue"><?php echo $extrainfo;?></td>
                 </tr>
                 </table>
  </form>
+
+
+
